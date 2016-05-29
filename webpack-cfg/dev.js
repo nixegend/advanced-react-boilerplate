@@ -11,7 +11,7 @@ let config = _.merge({
 
     entry: {
         app: [
-            'webpack-dev-server/client?http://' + gConfig.host + ':' + gConfig.clientPort,
+            'webpack-dev-server/client?http://' + gConfig.clientHost + ':' + gConfig.clientPort,
             'webpack/hot/only-dev-server',
             './index'
         ]
@@ -27,7 +27,7 @@ let config = _.merge({
         historyApiFallback: true,
         hot: true,
         inline: false,
-        host: gConfig.host,
+        host: gConfig.clientHost,
         port: gConfig.clientPort,
         quiet: false,
         debug: true,
@@ -35,7 +35,7 @@ let config = _.merge({
         noInfo: true,
         proxy: [{
             path: gConfig.urlAPI,
-            target: 'http://' + gConfig.host + ':' + gConfig.serverPort + '/'
+            target: 'http://' + gConfig.serverHost + ':' + gConfig.serverPort + '/'
         }],
         stats: {
             colors: true
