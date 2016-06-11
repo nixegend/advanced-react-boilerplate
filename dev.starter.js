@@ -1,19 +1,15 @@
-'use strict';
-
-let gConfig = require('./general.config');
-let open = require('open');
-let nodemon = require('nodemon');
-let webpack = require('webpack');
-let WebpackDevServer = require('webpack-dev-server');
-let wConfig = require('./webpack.config');
+const gConfig = require('./general.config');
+const open = require('open');
+const nodemon = require('nodemon');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const wConfig = require('./webpack.config');
 
 nodemon({
   ext: 'js jsx',
   watch: ['server/']
 }).on('start', () => {
   console.log('NODEMON => App has started');
-}).on('quit', () => {
-  console.log('NODEMON => App has quit');
 }).on('restart', (files) => {
   console.log('NODEMON => App restarted due to: \n', files);
 });

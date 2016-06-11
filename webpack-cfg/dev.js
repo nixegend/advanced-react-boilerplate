@@ -1,12 +1,10 @@
-'use strict';
+const gConfig = require('../general.config');
+const baseConfig = require('./base');
+const webpack = require('webpack');
+const path = require('path');
+const _ = require('lodash');
 
-let gConfig = require('../general.config');
-let baseConfig = require('./base');
-let webpack = require('webpack');
-let path = require('path');
-let _ = require('lodash');
-
-let config = _.merge({
+const config = _.merge({
     devtool: 'eval',
 
     entry: {

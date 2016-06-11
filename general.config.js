@@ -6,5 +6,5 @@ module.exports = {
     serverHost: 'localhost',
     clientPort: 8080,
     serverPort: 3000,
-    urlAPI: '/api/*',
+    urlAPI: '/api/*'
 }
