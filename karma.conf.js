@@ -29,8 +29,8 @@ module.exports = function (config) {
       reporters: [{
         type: 'html'
       }, {
-        type: 'text'
-      }]
+          type: 'text'
+        }]
     },
 
     // All plugins starting with karma will automatically be loaded
@@ -54,7 +54,7 @@ module.exports = function (config) {
     // https://github.com/karma-runner/karma-jasmine
     frameworks: ['jasmine'],
 
-    reporters: ['progress', 'coverage', 'dots'],
+    reporters: ['progress', 'coverage'],
 
     // ## Watch files
     // list of files / patterns to load in the browser
@@ -65,12 +65,14 @@ module.exports = function (config) {
     // list of files to exclude
     exclude: [],
 
+    logLevel: config.LOG_INFO,
+
     // ## Convert ES6 to ES5
     // as suggested here http://busypeoples.github.io/post/testing-workflow-with-es6/
-    preprocessors: {
-      // 'app/**/*.spec.js': ['coverage'], // Use webpack to build each test individually
-      'tests/**/*.js': ['webpack'] // More performant but test cannot be run individually
-    },
+    // preprocessors: {
+      // 'app/**/*.spec.js': ['coverage'] // Use webpack to build each test individually
+      // 'tests/**/*.js': ['webpack'] // More performant but test cannot be run individually
+    // },
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
@@ -84,7 +86,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: false
 
   });
 };
