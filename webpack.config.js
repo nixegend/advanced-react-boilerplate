@@ -3,7 +3,7 @@ const path = require('path');
 const configs = {
   dev: require(path.join(__dirname, 'webpack-cfg/dev')),
   build: require(path.join(__dirname, 'webpack-cfg/build'))
-  // can be added test runer
+  // test: require(path.join(__dirname, 'webpack-cfg/tests'))
 };
 
 module.exports = configs[NODE_ENV];
