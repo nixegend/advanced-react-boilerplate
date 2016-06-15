@@ -8,7 +8,7 @@
     "build": "set NODE_ENV=build && webpack",
     "dev": "set NODE_ENV=dev && node ./dev.starter.js",
     "test": "set NODE_ENV=test && karma start",
-    "clean": "rimraf src/*"
+    "clean": "rm -r src/*"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
@@ -53,7 +53,6 @@
     "null-loader": "^0.1.1",
     "open": "0.0.5",
     "react-hot-loader": "^1.3.0",
-    "rimraf": "^2.5.2",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
