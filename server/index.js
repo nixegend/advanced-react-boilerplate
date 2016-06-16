@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, gConfig.staticDir)));
 
 app.get('/*', (req, res, next) => {
   if (!(req.url.indexOf('/api/') === 0)) {
-    res.sendFile(path.join(__dirname, gConfig.staticDir + '/index.html'));
+    res.sendFile(path.join(__dirname, '../index.html'));
     // res.render('index', { title: "React-starter" }); // for ejs
   } else {
     next();
