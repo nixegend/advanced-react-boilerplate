@@ -1,7 +1,15 @@
+import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './components/Layout';
+import App from './components/App';
 
-const app = document.getElementById('app');
+const APP = document.getElementById('app');
 
-ReactDOM.render(<Layout />, app);
+ReactDOM.render(<AppContainer><App /></AppContainer>, APP);
+
+if (module.hot) {
+    module.hot.accept('./components/App', () => {
+       const NextApp = require('./components/App').default;
+       ReactDOM.render(<AppContainer><NextApp /></AppContainer>, APP);
+    });
+}

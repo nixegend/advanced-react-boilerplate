@@ -14,8 +14,7 @@ const config = _.merge({
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
-        drop_console: true,
-        unsafe: true
+        drop_console: true
       }
     })
   ]
@@ -24,7 +23,7 @@ const config = _.merge({
 
 // Add needed loaders
 config.module.loaders.push({
-  test: /\.(js|jsx)$/,
+  test: /\.js$/,
   include: path.join(__dirname, gConfig.appDir),
   loader: 'babel'
 });

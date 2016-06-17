@@ -5,10 +5,11 @@ const path = require('path');
 const _ = require('lodash');
 
 const config = _.merge({
-    devtool: 'eval',
+    devtool: 'inline-source-map',
 
     entry: {
         app: [
+            'react-hot-loader/patch',
             'webpack-dev-server/client?http://' + gConfig.clientHost + ':' + gConfig.clientPort,
             'webpack/hot/only-dev-server',
             './index'
@@ -44,9 +45,9 @@ const config = _.merge({
 
 // Add needed loaders
 config.module.loaders.push({
-    test: /\.(js|jsx)$/,
+    test: /\.js$/,
     include: path.join(__dirname, gConfig.appDir),
-    loader: 'react-hot!babel-loader'
+    loader: 'react-hot-loader/webpack!babel-loader'
 });
 
 module.exports = config;

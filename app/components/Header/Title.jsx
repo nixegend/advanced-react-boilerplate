@@ -1,7 +1,7 @@
 require('./title.scss');
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Title extends React.Component {
+export default class Title extends Component {
   loginBtnHandler() {
     require.ensure([], (require) => {
       const login = require('../login');

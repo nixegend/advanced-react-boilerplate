@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Footer from './Footer';
 import Header from './Header';
 
-export default class Layout extends React.Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      title: 'Welcome'
+      title: 'Welcome !'
     };
   }
 
   changeTitle(title) {
+    console.log('sfdf');
     this.setState({title});
   }
 

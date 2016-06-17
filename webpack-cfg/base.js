@@ -11,16 +11,16 @@ module.exports = {
     library: '[name]'
   },
 
-  eslint: {
-    configFile: path.join(__dirname, '../.eslintrc'),
-    failOnWarning: false,
-    failOnError: true,
-    quiet: true
-  },
+  // eslint: {
+  //   configFile: path.join(__dirname, '../.eslintrc'),
+  //   failOnWarning: false,
+  //   failOnError: true,
+  //   quiet: true
+  // },
 
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js'],
     alias: {
       // some specific files
       // core: srcPath + '/core/'
@@ -30,15 +30,15 @@ module.exports = {
   resolveLoader: {
     modulesDirectories: ['node_modules'],
     moduleTemplates: ['*-loader', '*'],
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js']
   },
 
   module: {
-    preLoaders: [{
-      test: /\.(js|jsx)$/,
-      loader: 'eslint-loader',
-      exclude: /node_modules/
-    }],
+    // preLoaders: [{
+    //   test: /\.js$/,
+    //   loader: 'eslint-loader',
+    //   exclude: /node_modules/
+    // }],
     loaders: [{
       test: /\.css$/,
       loader: 'style-loader!css-loader'

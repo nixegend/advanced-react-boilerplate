@@ -9,7 +9,7 @@ const config = _.merge({
 
     module: {
         preLoaders: [{
-            test: /\.(js|jsx)$/,
+            test: /\.js$/,
             loader: 'isparta-instrumenter-loader',
             include: path.join(__dirname, gConfig.appDir)
         }],
@@ -18,7 +18,7 @@ const config = _.merge({
             test: /\.(png|jpg|gif|woff|woff2|ttf|svg|css|sass|scss|less|styl)(\?.+)?$/,
             loader: 'null-loader'
         }, {
-            test: /\.(js|jsx)$/,
+            test: /\.js$/,
             loader: 'babel-loader',
             include: path.join(__dirname, gConfig.appDir)
         }]
