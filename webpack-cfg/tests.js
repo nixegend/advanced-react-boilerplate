@@ -11,7 +11,7 @@ const config = _.merge({
         preLoaders: [{
             test: /\.js$/,
             loader: 'isparta-instrumenter-loader',
-            include: path.join(__dirname, gConfig.appDir)
+            include: path.join(__dirname, gConfig.srcDir)
         }],
 
         loaders: [{
@@ -20,7 +20,7 @@ const config = _.merge({
         }, {
             test: /\.js$/,
             loader: 'babel-loader',
-            include: path.join(__dirname, gConfig.appDir)
+            include: path.join(__dirname, gConfig.srcDir)
         }]
     }
 }, baseConfig);

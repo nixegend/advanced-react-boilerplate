@@ -2,10 +2,10 @@ const gConfig = require('../general.config');
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, gConfig.appDir),
+  context: path.join(__dirname, gConfig.srcDir),
 
   output: {
-    path: path.join(__dirname, gConfig.staticDir),
+    path: path.join(__dirname, gConfig.appDir),
     publicPath: gConfig.urlBasePath,
     filename: '[name].js',
     library: '[name]'
@@ -46,8 +46,11 @@ module.exports = {
       test: /\.scss/,
       loader: 'style-loader!css-loader?sourceMap!sass-loader?outputStyle=expanded&sourceMap'
     }, {
-      test: /\.(html|ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
+      test: /\.(ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
       loader: 'file-loader?name=[path][name].[ext]?[hash]'
+    }, {
+      test: /\.(json)(\?.+)?$/,
+      loader: 'url-loader?name=[path][name].[ext]?[hash]'
     }]
   }
 };

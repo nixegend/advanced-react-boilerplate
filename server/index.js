@@ -13,7 +13,8 @@ const server = http.createServer(app);
 server.listen(gConfig.serverPort);
 
 // static files
-app.use(express.static(path.join(__dirname, gConfig.staticDir)));
+app.use(express.static(path.join(__dirname, '../static/')));
+app.use(express.static(path.join(__dirname, gConfig.appDir)));
 
 app.get('/*', (req, res, next) => {
   if (!(req.url.indexOf('/api/') === 0)) {

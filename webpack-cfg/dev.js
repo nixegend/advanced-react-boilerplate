@@ -46,7 +46,7 @@ const config = _.merge({
 // Add needed loaders
 config.module.loaders.push({
     test: /\.js$/,
-    include: path.join(__dirname, gConfig.appDir),
+    include: path.join(__dirname, gConfig.srcDir),
     loader: 'react-hot-loader/webpack!babel-loader'
 });
 
