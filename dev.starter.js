@@ -6,7 +6,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const wConfig = require('./webpack.config');
 
 nodemon({
-  ext: 'js jsx',
+  ext: 'js',
   watch: ['server/']
 }).on('start', () => {
   console.log('NODEMON => App has started');

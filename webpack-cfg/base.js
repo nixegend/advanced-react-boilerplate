@@ -46,8 +46,8 @@ module.exports = {
       test: /\.scss/,
       loader: 'style-loader!css-loader?sourceMap!sass-loader?outputStyle=expanded&sourceMap'
     }, {
-      test: /\.(png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
-      loader: 'file?name=[path][name].[ext]?[hash]'
+      test: /\.(html|ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
+      loader: 'file-loader?name=[path][name].[ext]?[hash]'
     }]
   }
 };
