@@ -1,7 +1,7 @@
 module.exports = {
     srcDir: '../src', // sources
-    appDir: '../app', // build
-    urlBasePath: '/',
+    appDir: '../static/app', // build
+    urlBasePath: '/app/',
     clientHost: 'localhost',
     serverHost: 'localhost',
     clientPort: 8080,

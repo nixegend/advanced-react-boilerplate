@@ -47,7 +47,7 @@ module.exports = {
       loader: 'style-loader!css-loader?sourceMap!sass-loader?outputStyle=expanded&sourceMap'
     }, {
       test: /\.(ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
-      loader: 'file-loader?name=[path][name].[ext]?[hash]'
+      loader: 'filer?name=[path][name].[ext]?[hash]'
     }, {
       test: /\.(json)(\?.+)?$/,
       loader: 'url-loader?name=[path][name].[ext]?[hash]'

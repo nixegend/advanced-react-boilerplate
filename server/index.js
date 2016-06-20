@@ -14,11 +14,10 @@ server.listen(gConfig.serverPort);
 
 // static files
 app.use(express.static(path.join(__dirname, '../static/')));
-app.use(express.static(path.join(__dirname, gConfig.appDir)));
 
 app.get('/*', (req, res, next) => {
   if (!(req.url.indexOf('/api/') === 0)) {
-    res.sendFile(path.join(__dirname, '../index.html'));
+    res.sendFile(path.join(__dirname, '../static/index.html'));
     // res.render('index', { title: "React-starter" }); // for ejs
   } else {
     next();

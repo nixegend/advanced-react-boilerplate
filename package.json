@@ -8,7 +8,7 @@
     "build": "set NODE_ENV=build && webpack",
     "dev": "set NODE_ENV=dev && node ./dev.starter.js",
     "test": "set NODE_ENV=test && karma start",
-    "clean": "rm -r app/*"
+    "clean": "rm -r static/app/*"
   },
   "engines": {
     "node": "6.2.1",

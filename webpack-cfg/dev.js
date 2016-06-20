@@ -22,7 +22,7 @@ const config = _.merge({
     ],
 
     devServer: {
-        contentBase: path.join(__dirname, '../'),
+        contentBase: path.join(__dirname, '../static/'),
         historyApiFallback: true,
         hot: true,
         inline: false,
