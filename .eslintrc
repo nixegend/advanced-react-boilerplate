@@ -9,7 +9,6 @@
   "ecmaFeatures": {
     "globalReturn": true,
     "classes": true,
-    "jsx": true,
     "modules": true
   },
 

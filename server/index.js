@@ -1,6 +1,5 @@
 'use strict';
 
-const NODE_ENV = process.env.NODE_ENV;
 const gConfig = require('../general.config');
 const express = require('express');
 const path = require('path');
@@ -24,7 +23,7 @@ app.get('/*', (req, res, next) => {
   }
 });
 
-if (NODE_ENV && NODE_ENV.replace(/\s/g, '') === 'prod') {
+if (process.argv.indexOf('--open') !== -1) {
   const open = require('open');
   console.log('Listening at ' + gConfig.serverHost + ':' + gConfig.serverPort + '/');
   open('http://' + gConfig.serverHost + ':' + gConfig.serverPort + '/');

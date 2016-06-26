@@ -12,7 +12,7 @@ const config = _.merge({
             'react-hot-loader/patch',
             'webpack-dev-server/client?http://' + gConfig.clientHost + ':' + gConfig.clientPort,
             'webpack/hot/only-dev-server',
-            './index'
+            './index.hot-loader'
         ]
     },
 
@@ -47,7 +47,7 @@ const config = _.merge({
 config.module.loaders.push({
     test: /\.js$/,
     include: path.join(__dirname, gConfig.srcDir),
-    loader: 'react-hot-loader/webpack!babel-loader'
+    loader: 'babel-loader'
 });
 
 module.exports = config;
