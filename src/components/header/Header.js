@@ -1,20 +1,22 @@
-require('./title.scss');
+require('./header.scss');
 import React, { Component } from 'react';
 
-export default class Title extends Component {
+class Header extends Component {
   loginBtnHandler() {
     require.ensure([], (require) => {
-      const login = require('../login');
+      const login = require('../Login');
       login();
     });
   }
 
   render() {
     return (
-      <div>
-        <h1>{this.props.title}</h1>
+      <header>
+        <h1>Header</h1>
         <button type='button' onClick={this.loginBtnHandler} >Login</button>
-      </div>
+      </header>
     );
   }
 }
+
+export default Header;
