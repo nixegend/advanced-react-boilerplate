@@ -9,8 +9,8 @@
     "dev": "node ./dev.starter.js",
     "karma:test": "karma start",
     "watch:test": "npm t -- -w",
-    "test": "mocha src/**/*.test.js --compilers js:babel-register --colors",
-    "cover": "babel-istanbul cover --report text --report html --dir ./coverage node_modules/mocha/bin/_mocha src/**/*.test.js --colors",
+    "test": "mocha -t 15000 \"src/**/*.test.js\" --compilers js:babel-register -c",
+    "cover": "babel-istanbul cover --report text --report html --colors --dir ./coverage node_modules/mocha/bin/_mocha -- -t 15000 \"src/**/*.test.js\" -c",
     "lint": "eslint src",
     "clean": "rm -r static/app/*"
   },
