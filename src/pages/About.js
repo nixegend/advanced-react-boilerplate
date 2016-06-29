@@ -5,7 +5,7 @@ const defaultProps = {};
 
 const About = () => (
   <div className='about'>
-    <h2>About page content goes here</h2>
+    <h2>About page content</h2>
   </div>
 );
 

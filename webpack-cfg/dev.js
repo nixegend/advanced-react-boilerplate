@@ -31,7 +31,7 @@ const config = _.merge({
         quiet: false,
         debug: true,
         publicPath: gConfig.urlBasePath,
-        noInfo: true,
+        noInfo: false,
         proxy: [{
             path: gConfig.urlAPI,
             target: 'http://' + gConfig.serverHost + ':' + gConfig.serverPort + '/'

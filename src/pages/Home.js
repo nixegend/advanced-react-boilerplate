@@ -5,7 +5,7 @@ const defaultProps = {};
 
 const Home = () => (
   <div className='home'>
-    <h2>Home page content goes here</h2>
+    <h2>Home page content</h2>
   </div>
 );
 

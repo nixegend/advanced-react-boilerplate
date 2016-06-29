@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
+import React from 'react';
+import { Router, browserHistory } from 'react-router';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
+import routes from './routes';
+import { default as mainReducer } from './mainReducer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className='wrapper'>
-        <Header />
-        <Footer />
-      </div>
-    );
-  }
-}
+const middleware = routerMiddleware(browserHistory);
+const store = createStore(mainReducer, applyMiddleware(middleware));
+const history = syncHistoryWithStore(browserHistory, store);
+
+const App = () => (
+  <Provider store={store}>
+    <Router history={history}>{routes}</Router>
+  </Provider>
+);
 
 export default App;
