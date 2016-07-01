@@ -2,9 +2,8 @@ const gConfig = require('../general.config');
 const baseConfig = require('./base');
 const webpack = require('webpack');
 const path = require('path');
-const _ = require('lodash');
 
-const config = _.merge({
+const config = Object.assign({}, {
     devtool: 'inline-source-map',
 
     entry: {
@@ -17,8 +16,11 @@ const config = _.merge({
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`
+      })
     ],
 
     devServer: {

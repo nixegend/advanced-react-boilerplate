@@ -2,9 +2,8 @@ const gConfig = require('../general.config');
 const baseConfig = require('./base');
 const webpack = require('webpack');
 const path = require('path');
-const _ = require('lodash');
 
-const config = _.merge({
+const config = Object.assign({}, {
   entry: {
     app: ['./index']
   },
@@ -16,6 +15,9 @@ const config = _.merge({
         warnings: false,
         drop_console: true
       }
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`
     })
   ]
 
