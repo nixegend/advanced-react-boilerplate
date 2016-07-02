@@ -10,11 +10,6 @@
         "production": true
       }
     }],
-    "transform-runtime",
-    "react-html-attrs",
-    "react-hot-loader/babel",
-    "transform-decorators-legacy",
-   	"transform-class-properties",
-   	"transform-object-rest-spread"
+    "react-hot-loader/babel"
   ]
 }

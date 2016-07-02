@@ -93,7 +93,7 @@ module.exports = (config) => {
             },
             {
                 test: /\.scss/,
-                loader: 'style-loader!css-loader?sourceMap!sass-loader?outputStyle=expanded&sourceMap'
+                loader: 'style-loader!css-loader?modules&localIdentName=[path]_[name]_[local]__[hash:base64:3]!sass-loader'
             },
             {
                 test: /\.(json)(\?.+)?$/,

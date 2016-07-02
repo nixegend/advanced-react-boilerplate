@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = Object.assign({}, {
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
 
     entry: {
         app: [
