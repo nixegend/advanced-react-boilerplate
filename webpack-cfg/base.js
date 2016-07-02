@@ -44,7 +44,7 @@ module.exports = {
       loader: 'style-loader!css-loader'
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader?sourceMap!sass-loader?outputStyle=expanded&sourceMap'
+      loader: 'style-loader!css-loader?modules&localIdentName=[path]_[name]_[local]__[hash:base64:3]!sass-loader'
     }, {
       test: /\.(ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
       loader: 'file-loader?name=[path][name].[ext]?[hash]'

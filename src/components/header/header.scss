@@ -1,8 +1,14 @@
-h1 {
-  color: red;
-}
-
-button {
+.button-md {
+  box-shadow: 1px 0px 2px 2px #a6a6a6;
   border: 1px solid dodgerblue;
   background-color: yellow;
+  float: left;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #ceceec;
+  color: red;
 }

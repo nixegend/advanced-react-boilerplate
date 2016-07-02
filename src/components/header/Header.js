@@ -1,5 +1,5 @@
-require('./header.scss');
 import React, { Component } from 'react';
+import { default as HeaderScss } from './header.scss';
 
 class Header extends Component {
   loginBtnHandler() {
@@ -11,9 +11,12 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-        <h1>Header</h1>
-        <button type='button' onClick={this.loginBtnHandler} >Login</button>
+      <header className={HeaderScss.header}>
+        <button type='button'
+          className={HeaderScss['button-md']}
+          onClick={this.loginBtnHandler}
+        >Login</button>
+        <h4>Header</h4>
       </header>
     );
   }

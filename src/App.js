@@ -1,3 +1,4 @@
+require('./styles/general.scss');
 import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
