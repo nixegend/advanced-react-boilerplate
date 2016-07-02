@@ -1,15 +1,14 @@
 {
   "extends": "airbnb",
 
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-    },
-
-  "ecmaFeatures": {
-    "globalReturn": true,
-    "classes": true,
-    "modules": true
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "globalReturn": true,
+      "classes": true,
+      "modules": true
+    }
   },
 
   "env": {
@@ -19,11 +18,10 @@
   },
 
   "globals": {
-    "document": false,
-    "escape": false,
-    "navigator": false,
-    "unescape": false,
-    "window": false,
+    "document": true,
+    "worker":true,
+    "window": true,
+    "mongo": true,
     "describe": true,
     "before": true,
     "it": true,
