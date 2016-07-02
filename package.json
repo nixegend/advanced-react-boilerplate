@@ -11,8 +11,7 @@
     "watch:test": "npm t -- -w",
     "test": "mocha -t 15000 \"src/**/*.test.js\" --compilers js:babel-register -c",
     "cover": "babel-istanbul cover --report text --report html --colors --dir ./coverage node_modules/mocha/bin/_mocha -- -t 15000 \"src/**/*.test.js\" -c",
-    "lint": "eslint src",
-    "flow": "./node_modules/.bin/flow",
+    "lint": "eslint src --color",
     "clean": "rm -r static/app/*"
   },
   "engines": {
