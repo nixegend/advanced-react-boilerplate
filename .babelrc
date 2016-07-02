@@ -5,6 +5,11 @@
     "stage-0"
   ],
   "plugins": [
+    ["typecheck", {
+      "disable": {
+        "production": true
+      }
+    }],
     "transform-runtime",
     "react-html-attrs",
     "react-hot-loader/babel",
