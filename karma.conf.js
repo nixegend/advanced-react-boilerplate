@@ -80,7 +80,6 @@ module.exports = (config) => {
           loader: 'isparta-loader',
           include: path.join(__dirname, 'src')
         }],
-
         loaders: [
             {
                 test: /\.js$/,
@@ -88,12 +87,8 @@ module.exports = (config) => {
                 include: path.join(__dirname, 'src')
             },
             {
-                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico)(\?.*$|$)/,
+                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico|scss|less|css)(\?.*$|$)/,
                 loader: 'null-loader'
-            },
-            {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader?modules&localIdentName=[path]_[name]_[local]__[hash:base64:3]!sass-loader'
             },
             {
                 test: /\.(json)(\?.+)?$/,

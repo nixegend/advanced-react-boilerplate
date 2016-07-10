@@ -9,8 +9,8 @@
     "dev": "node ./dev.starter.js",
     "karma:test": "karma start",
     "watch:test": "npm t -- -w",
-    "test": "mocha -t 15000 \"src/**/*.test.js\" --compilers js:babel-register -c",
-    "cover": "babel-istanbul cover --report text --report html --colors --dir ./coverage node_modules/mocha/bin/_mocha -- -t 15000 \"src/**/*.test.js\" -c",
+    "test": "mocha -t 15000 \"src/**/*.test.js\" --compilers js:babel-register --require ignore-styles -c",
+    "cover": "babel-istanbul cover --report text --report html --colors --dir ./coverage node_modules/mocha/bin/_mocha -- -t 15000 \"src/**/*.test.js\" --require ignore-styles -c",
     "lint": "eslint src --color",
     "clean": "rm -r static/app/*"
   },
@@ -54,6 +54,7 @@
     "eslint-plugin-react": "^5.1.1",
     "file-loader": "^0.8.5",
     "flow-bin": "^0.27.0",
+    "ignore-styles": "^4.0.0",
     "isparta-loader": "^2.0.0",
     "jsdom": "^9.3.0",
     "karma": "^0.13.22",
@@ -84,12 +85,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nixegend/basic-react-starter.git"
+    "url": "git+https://github.com/nixegend/advanced-react-boilerplate.git"
   },
   "author": "Anton Panchenko <nixegend@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nixegend/basic-react-starter/issues"
+    "url": "https://github.com/nixegend/advanced-react-boilerplate/issues"
   },
-  "homepage": "https://github.com/nixegend/basic-react-starter#readme"
+  "homepage": "https://github.com/nixegend/advanced-react-boilerplate#readme"
 }
