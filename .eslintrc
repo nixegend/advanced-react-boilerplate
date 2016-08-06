@@ -2,7 +2,6 @@
   "extends": "airbnb",
 
   "parserOptions": {
-    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "globalReturn": true,

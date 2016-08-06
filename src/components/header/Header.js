@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { default as HeaderScss } from './header.scss';
+import styles from './header.module.css';
 
 class Header extends Component {
   loginBtnHandler() {
@@ -11,9 +11,9 @@ class Header extends Component {
 
   render() {
     return (
-      <header className={HeaderScss.header}>
+      <header className={styles.header}>
         <button type='button'
-          className={HeaderScss['button-md']}
+          className={styles['button-md']}
           onClick={this.loginBtnHandler}
         >Login</button>
         <h4>Header</h4>

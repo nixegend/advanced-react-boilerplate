@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { default as FooterScss } from './footer.scss';
+import styles from './footer.module.css';
 
 class Footer extends Component {
   render() {
     return (
-      <footer className={FooterScss.footer}>
+      <footer className={styles.footer}>
         <h4>Footer</h4>
       </footer>
     );

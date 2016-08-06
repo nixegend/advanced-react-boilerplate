@@ -8,7 +8,7 @@ module.exports = (config) => {
     browserNoActivityTimeout: 30000,
     colors: true,
     autoWatch: true,
-    frameworks: ['chai', 'sinon', 'mocha'],
+    frameworks: ['chai', 'mocha'],
 
     files: [
       'src/**/*.test.js'
@@ -32,10 +32,8 @@ module.exports = (config) => {
     plugins: [
       'karma-chai',
       'karma-mocha',
-      'karma-sinon',
       'karma-webpack',
       'karma-coverage',
-      'karma-sinon-chai',
       'karma-mocha-reporter',
       'karma-sourcemap-loader',
       'karma-phantomjs-launcher'
@@ -87,7 +85,7 @@ module.exports = (config) => {
                 include: path.join(__dirname, 'src')
             },
             {
-                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico|scss|less|css)(\?.*$|$)/,
+                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico)(\?.*$|$)/,
                 loader: 'null-loader'
             },
             {

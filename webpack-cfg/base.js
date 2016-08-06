@@ -1,5 +1,7 @@
 const gConfig = require('../general.config');
 const path = require('path');
+const preCss = require('precss');
+const postCssNext = require('postcss-cssnext');
 
 module.exports = {
   context: path.join(__dirname, gConfig.srcDir),
@@ -41,14 +43,11 @@ module.exports = {
     // }],
     loaders: [{
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      exclude: /\.module.css$/,
+      loaders: ['style', 'css', 'postcss']
     }, {
-      test: /\.scss$/,
-      exclude: /\.module.scss$/,
-      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
-    }, {
-      test: /\.module.scss$/,
-      loader: 'style-loader!css-loader?camelCase&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
+      test: /\.module.css$/,
+      loader: 'style-loader!css-loader?camelCase&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
     }, {
       test: /\.(ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
       loader: 'file-loader?name=[path][name].[ext]?[hash]'
@@ -56,5 +55,10 @@ module.exports = {
       test: /\.(json)(\?.+)?$/,
       loader: 'url-loader?name=[path][name].[ext]?[hash]'
     }]
-  }
+  },
+
+  // postLoaders [ ... ]
+
+  postcss: [preCss, postCssNext]
+
 };
