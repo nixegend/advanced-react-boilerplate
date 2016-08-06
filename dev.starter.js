@@ -18,6 +18,6 @@ new WebpackDevServer(webpack(wConfig), wConfig.devServer)
   .listen(gConfig.clientPort, gConfig.clientHost, (err, result) => {
     if (err) console.log(err);
 
-    console.log('Listening at ' + gConfig.clientHost + ':' + gConfig.clientPort + '/webpack-dev-server/');
-    open('http://' + gConfig.clientHost + ':' + gConfig.clientPort + '/webpack-dev-server/');
+    console.log(`Listening at http://${gConfig.clientHost}:${gConfig.clientPort}/webpack-dev-server/`);
+    open(`http://${gConfig.clientHost}:${gConfig.clientPort}/webpack-dev-server/`);
   });

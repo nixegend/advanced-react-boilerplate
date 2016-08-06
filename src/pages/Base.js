@@ -1,4 +1,5 @@
-// @flow
+/* @flow */
+
 import React from 'react';
 import NavMenuBox from '../components/nav-menu/NavMenuBox';
 import Footer from '../components/footer/Footer';

@@ -43,8 +43,12 @@ module.exports = {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
     }, {
-      test: /\.scss/,
-      loader: 'style-loader!css-loader?modules&localIdentName=[path]_[name]_[local]__[hash:base64:3]!sass-loader'
+      test: /\.scss$/,
+      exclude: /\.module.scss$/,
+      loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+    }, {
+      test: /\.module.scss$/,
+      loader: 'style-loader!css-loader?camelCase&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
     }, {
       test: /\.(ico|png|jpg|gif|eot|ttf|svg|woff|woff2)(\?.+)?$/,
       loader: 'file-loader?name=[path][name].[ext]?[hash]'

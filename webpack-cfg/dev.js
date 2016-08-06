@@ -9,7 +9,7 @@ const config = Object.assign({}, {
     entry: {
         app: [
             'react-hot-loader/patch',
-            'webpack-dev-server/client?http://' + gConfig.clientHost + ':' + gConfig.clientPort,
+            `webpack-dev-server/client?http://${gConfig.clientHost}:${gConfig.clientPort}`,
             'webpack/hot/only-dev-server',
             './index.hot-loader'
         ]
@@ -36,7 +36,7 @@ const config = Object.assign({}, {
         noInfo: false,
         proxy: [{
             path: gConfig.urlAPI,
-            target: 'http://' + gConfig.serverHost + ':' + gConfig.serverPort + '/'
+            target: `http://${gConfig.serverHost}:${gConfig.serverPort}/`
         }],
         stats: {
             colors: true

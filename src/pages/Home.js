@@ -1,9 +1,9 @@
-// @flow
+/* @flow */
 import React from 'react';
-import { default as HomeStyles } from './home.scss';
+import styles from '../styles/home.module.scss';
 
 const Home = (props: Object): Object => (
-  <div className='home'>
+  <div className={styles.stHome}>
     <h2>Home page content</h2>
   </div>
 );
