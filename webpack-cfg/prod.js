@@ -27,7 +27,7 @@ const config = Object.assign({}, {
 config.module.loaders.push({
   test: /\.js$/,
   include: path.join(__dirname, gConfig.srcDir),
-  loader: 'babel'
+  loaders: ['babel'] // 'eslint-loader'
 });
 
 module.exports = config;

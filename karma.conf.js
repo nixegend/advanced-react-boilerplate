@@ -85,7 +85,7 @@ module.exports = (config) => {
                 include: path.join(__dirname, 'src')
             },
             {
-                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico)(\?.*$|$)/,
+                test: /\.(png|jpeg|jpg|gif|woff|woff2|eot|ttf|svg|ico|css)(\?.*$|$)/,
                 loader: 'null-loader'
             },
             {

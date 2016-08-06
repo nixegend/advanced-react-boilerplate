@@ -2,15 +2,17 @@ import './styles/general.css';
 
 import React from 'react';
 import { Router, browserHistory } from 'react-router';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
-import routes from './routes';
-import { default as mainReducer } from './mainReducer';
+import { syncHistoryWithStore } from 'react-router-redux';
 
-const middleware = routerMiddleware(browserHistory);
-const store = createStore(mainReducer, applyMiddleware(middleware));
+import routes from './routes';
+import storeConfigs from './storeConfigs';
+
+const store = storeConfigs();
 const history = syncHistoryWithStore(browserHistory, store);
+
+// expose for debugging
+window.store = store;
 
 const App = () => (
   <Provider store={store}>
